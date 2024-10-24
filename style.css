@@ -1,13 +1,29 @@
 :root {
     --text-color: #DBE4EF;
-    --card-front-color: #144480;
-    --card-back-color: #00F4BF;
+    --card-front-color: #14806e;
+    --card-back-color: #5e00f4;
 }
-body {
-    background: url(download.jpeg');
+.body
+.cartao {
+    flex: 1 0 calc(100% - 1rem);
+}
+ {
+    footer {
+        background-color: black;
+        color: purple;
+        bottom:0;
+        position:fixed;
+        width:100%;
+        height:2rem;
+    }
+    footer p{
+        text-align: center;
+        font-size: 0.6rem;
+        margin-top: 0,5rem;
+    }
     font-family: Bai Jamjuree;
 }
-.cartao:hover .cartao__conteudo {
+.cartao:active .cartao__conteudo {
     transform: rotateY(180deg);
 }
 .cartao__conteudo__pergunta,
@@ -16,6 +32,7 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
+    box-sizing: border-box;
 }
 footer p{
     margin-top: 0,5rem;
@@ -58,7 +75,7 @@ footer p{
     position: absolute;
     margin: 0.6rem;
     border-radius: 0.6rem;
-    font-size: 1vw;
+    font-size: 3vw;
     backface-visibility: hidden;
 }
 .cartao__conteudo__pergunta p{
@@ -71,9 +88,19 @@ footer p{
 }
 .cartao__conteudo__resposta {
     transform: rotateY(180deg);
+    background-color: rdba(0, 244, 191, 0.2);
+    border: 4px solid var(--card-back-color);
 }
 .cartao__conteudo p {
     margin-top: 1rem;
     padding: 2rem;
     margin-top: 4rem;
+    font-size: 3.8vw;
+}
+@media (max-width: 560 px) {
+
+    body {
+        background: url('img/bd-mobile.webp');
+    }
+
 }
